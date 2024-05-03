@@ -9,8 +9,8 @@ export default function Navbar() {
       <Link href="/blog" className="font-bold">
         Blog
       </Link>
-      <Link href={`/blog/article`} className="font-bold ml-2">
-        Article 1
+      <Link href={`/blog/Nextjs Cours 1`} className="font-bold ml-2">
+        Nextjs-Cours 1
       </Link>
       <Link href={`/blog/article/reservation`} className="font-bold ml-4">
         Sous-Article 1
