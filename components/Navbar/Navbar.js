@@ -6,6 +6,9 @@ export default function Navbar() {
       <Link href="/" className="font-bold">
         Accueil
       </Link>
+      <Link href="/gallery" className="font-bold">
+        Galerie
+      </Link>
       <Link href="/blog" className="font-bold">
         Blog
       </Link>
