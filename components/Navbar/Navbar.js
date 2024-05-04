@@ -16,6 +16,9 @@ export default function Navbar() {
       <Link href="/cours" className="font-bold mx-2">
         BTC
       </Link>
+      <Link href="/add" className="font-bold mx-2">
+        Add word
+      </Link>
     </nav>
   );
 }

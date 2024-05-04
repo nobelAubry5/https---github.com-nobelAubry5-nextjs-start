@@ -1,16 +1,40 @@
 import Head from "next/head";
+import { useState, useEffect } from "react";
 // import { redirect } from "next/dist/server/api-utils";
 import { v4 as uuidv4 } from "uuid";
+
 export default function Home(props) {
-  console.log(props);
+  const [state, setState] = useState(false);
+  useEffect(() => {
+    newWord();
+  }, []);
+  const newWord = () => {
+    fetch("/api/vocapi")
+      .then((response) => response.json())
+      .then((data) => setState(data));
+  };
+  console.log(state);
+  let randomWord;
+  if (state) {
+    const array = state.englishList[0].data;
+    randomWord = array[Math.floor(Math.random() * array.length)].en;
+  }
+
   return (
     <>
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Accueil</title>
       </Head>
-      <h1>Vocabulaire de base</h1>
-      <table className="mx-auto">
+      <h1>Mots au hasard</h1>
+      <button
+        className="bg-green-700 rounded-md text-white py-4 px-2"
+        onClick={newWord}
+      >
+        Get random words
+      </button>
+      <p>{randomWord}</p>
+      {/* <table className="mx-auto">
         <tbody>
           {props.array.map((el) => (
             <tr key={uuidv4()} className="border border-slate-800 text-center">
@@ -23,7 +47,7 @@ export default function Home(props) {
             </tr>
           ))}
         </tbody>
-      </table>
+      </table> */}
     </>
   );
 }
