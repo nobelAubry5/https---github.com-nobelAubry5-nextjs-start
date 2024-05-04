@@ -6,6 +6,9 @@ export default function Navbar() {
       <Link href="/" className="font-bold mx-2">
         Accueil
       </Link>
+      <Link href="/listes" className="font-bold mx-2">
+        Liste de vocabulaires
+      </Link>
 
       <Link href="/joke" className="font-bold mx-2">
         Random Joke

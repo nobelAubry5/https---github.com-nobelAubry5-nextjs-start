@@ -22,7 +22,7 @@ export async function getStaticProps() {
   const data = await joke.json();
   return {
     props: { data },
-    revalidate: 20, // revalidate should be inside the return object
+    // revalidate: 20, // revalidate should be inside the return object
   };
 }
 //https://goquotes-api.herokuapp.com/api/v1/random?count=1
