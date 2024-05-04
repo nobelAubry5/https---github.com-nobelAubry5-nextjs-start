@@ -7,8 +7,8 @@ export default function Navbar() {
         Accueil
       </Link>
 
-      <Link href="/contact" className="font-bold mx-2">
-        Contact
+      <Link href="/joke" className="font-bold mx-2">
+        Random Joke
       </Link>
     </nav>
   );

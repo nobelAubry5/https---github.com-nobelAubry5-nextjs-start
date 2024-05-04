@@ -2,7 +2,7 @@ export default function contact(props) {
   console.log(props);
   return (
     <div>
-      <h1>Random joke</h1>
+      <h1 className="text-xl font-bold my-4">Random joke</h1>
       <p>
         <strong>Category: </strong>
         {props.data.category}

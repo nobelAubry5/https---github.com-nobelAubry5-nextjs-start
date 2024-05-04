@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Navbar from "../components/Navbar/Navbar";
+import { redirect } from "next/dist/server/api-utils";
 
 export default function Home(props) {
   console.log(props);
@@ -30,5 +31,15 @@ export default function Home(props) {
 export async function getStaticProps() {
   const data = await import(`/data/vocabulary.json`);
   const array = data.vocabulary;
+  // if (array.length === 0) {
+  //   return {
+  //     notFound: true, // Si le fichier json est vide, affichage de la page 404
+  //   };
+  // }
+  // if (array.length === 0) {
+  //   return {
+  //     redirect: { destination: "/joke" }, // Si le fichier json est vide, redirection vers la page joke
+  //   };
+  // }
   return { props: { array } };
 }
