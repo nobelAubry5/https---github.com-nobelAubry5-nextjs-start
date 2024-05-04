@@ -10,7 +10,7 @@ export default function Home(props) {
         <title>Accueil</title>
       </Head>
       <h1>Vocabulaire de base</h1>
-      <table className="flex flex-row justify-center">
+      <table className="mx-auto">
         <tbody>
           {props.array.map((el) => (
             <tr className="border border-slate-800 text-center">
