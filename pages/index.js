@@ -1,7 +1,6 @@
 import Head from "next/head";
-import Navbar from "../components/Navbar/Navbar";
-import { redirect } from "next/dist/server/api-utils";
-
+// import { redirect } from "next/dist/server/api-utils";
+import { v4 as uuidv4 } from "uuid";
 export default function Home(props) {
   console.log(props);
   return (
@@ -14,7 +13,7 @@ export default function Home(props) {
       <table className="mx-auto">
         <tbody>
           {props.array.map((el) => (
-            <tr className="border border-slate-800 text-center">
+            <tr key={uuidv4()} className="border border-slate-800 text-center">
               <td className="py-3 px-8 mr-4 border border-slate-800">
                 {el.en}
               </td>
