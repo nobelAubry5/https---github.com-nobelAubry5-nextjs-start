@@ -2,7 +2,6 @@ import { useRouter } from "next/router";
 import { v4 as uuidv4 } from "uuid";
 
 export default function liste(props) {
-  console.log(props);
   const router = useRouter();
   return (
     <div>

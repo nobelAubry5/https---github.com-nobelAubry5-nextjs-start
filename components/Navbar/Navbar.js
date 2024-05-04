@@ -7,11 +7,14 @@ export default function Navbar() {
         Accueil
       </Link>
       <Link href="/listes" className="font-bold mx-2">
-        Liste de vocabulaires
+        Vocabulaires
       </Link>
 
       <Link href="/joke" className="font-bold mx-2">
-        Random Joke
+        Joke
+      </Link>
+      <Link href="/cours" className="font-bold mx-2">
+        BTC
       </Link>
     </nav>
   );
